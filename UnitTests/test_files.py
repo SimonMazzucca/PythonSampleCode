@@ -1,7 +1,7 @@
 import unittest
 
 
-class MyTestCase(unittest.TestCase):
+class TestFiles(unittest.TestCase):
 
     def test_file_read_all(self):
         path = "C:\\Users\\simon\\.gitconfig"

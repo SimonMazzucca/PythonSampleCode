@@ -25,6 +25,12 @@ class TestDictionaries(unittest.TestCase):
     def test_dictionary_access(self):
         self.assertEqual("Aerosmith", self.bands[1])
 
+    def test_dictionary_contains(self):
+        found = 3 in self.bands
+        self.assertEqual(True, found)
+        found = 404 in self.bands
+        self.assertEqual(False, found)
+
     def test_dictionary_add(self):
         # add Ozzy to bands
         self.bands[5] = "Ozzy"
@@ -37,9 +43,3 @@ class TestDictionaries(unittest.TestCase):
             print("\n{0}'s contact info:".format(contact))
             print("Phone: {0}".format(self.contacts[contact]['phone']))
             print("Email: {0}".format(self.contacts[contact]['email']))
-
-
-
-
-
-
