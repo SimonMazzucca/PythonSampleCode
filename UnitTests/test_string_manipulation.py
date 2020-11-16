@@ -44,3 +44,23 @@ class TestStringManipulation(TestCase):
         parts = s.split("'")
         self.assertEqual("n", parts[1])
 
+    """
+    string[start:end:step]
+    - start is index (0 based)
+    - end is char position (1 based)
+    """
+    def test_substrings(self):
+        #    01234567890
+        s = "Rock'n'Roll"
+
+        # from index 0 to 4th char
+        self.assertEqual("Rock", s[0:4])
+
+        # whole string every other char
+        self.assertEqual("Rc''ol", s[::2])
+
+        # from 4 to end
+        self.assertEqual("'n'Roll", s[4:])
+
+        # from start to 4th char
+        self.assertEqual("Rock", s[:4])
