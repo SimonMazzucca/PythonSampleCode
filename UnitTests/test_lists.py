@@ -25,9 +25,13 @@ class TestLists(TestCase):
         i = nums.index(1)
         self.assertEqual(0, i)
 
-        # remove item
+        # remove item by value
         nums.remove(1)
         self.assertEqual([2, 3], nums)
+
+        # remove item by index
+        del nums[-1]
+        self.assertEqual([2], nums)
 
     def test_advanced_list_methods(self):
         alpha1 = ["s", "i", "m", "o", "n", "e"]

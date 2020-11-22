@@ -47,6 +47,15 @@ class TestLoopsAndIterables(unittest.TestCase):
         for index, item in enumerate(lists):
             print(index, item)
 
+    def test_for_loop_reverse(self):
+        print("for loop: 9 to 0")
+        for i in reversed(range(0, 10)):
+            print(i)
+
+        print("for loop: 10 to 1")
+        for i in range(10, 0, -1):
+            print(i)
+
     def test_while_loop(self):
         i = 0
 
