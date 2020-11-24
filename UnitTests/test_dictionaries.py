@@ -3,7 +3,6 @@ import unittest
 
 
 class TestDictionaries(unittest.TestCase):
-
     bands = {
         1: "Aerosmith",
         2: "Megadeth",
@@ -55,3 +54,9 @@ class TestDictionaries(unittest.TestCase):
         self.assertEqual(True, found)
         found = "gnr" in self.bands_set
         self.assertEqual(False, found)
+
+    def test_list_to_set_conversion(self):
+        nums = [1, 1, 2, 2]
+        self.assertEqual(4, len(nums))
+        unique = set(nums)
+        self.assertEqual(2, len(unique))
