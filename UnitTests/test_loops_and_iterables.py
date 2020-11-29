@@ -48,9 +48,14 @@ class TestLoopsAndIterables(unittest.TestCase):
             print(index, item)
 
     def test_for_loop_reverse(self):
-        print("for loop: 9 to 0")
+        print("Reversed loop from number to number")
         for i in reversed(range(0, 10)):
             print(i)
+
+        print("Reversed loop of array")
+        nums = [1, 2, 3, 4]
+        for i in reversed(range(len(nums))):
+            print(nums[i])
 
         print("for loop: 10 to 1")
         for i in range(10, 0, -1):
