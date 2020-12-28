@@ -3,7 +3,7 @@ import unittest
 
 
 class TestDictionaries(unittest.TestCase):
-    bands = {
+    bands_dic = {
         1: "Aerosmith",
         2: "Megadeth",
         3: "GnR",
@@ -28,20 +28,20 @@ class TestDictionaries(unittest.TestCase):
     }
 
     def test_dictionary_access(self):
-        self.assertEqual("Aerosmith", self.bands[1])
+        self.assertEqual("Aerosmith", self.bands_dic[1])
 
     def test_dictionary_contains(self):
-        found = 3 in self.bands
+        found = 3 in self.bands_dic
         self.assertEqual(True, found)
-        found = 404 in self.bands
+        found = 404 in self.bands_dic
         self.assertEqual(False, found)
 
     def test_dictionary_add(self):
         # add Ozzy to bands
-        self.bands[5] = "Ozzy"
-        self.assertEqual("Ozzy", self.bands[5])
+        self.bands_dic[5] = "Ozzy"
+        self.assertEqual("Ozzy", self.bands_dic[5])
 
-        pretty_print(self.bands)
+        pretty_print(self.bands_dic)
 
     def test_dic_loop(self):
         for contact in self.contacts:
