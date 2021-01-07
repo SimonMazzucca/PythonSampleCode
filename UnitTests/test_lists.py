@@ -51,6 +51,15 @@ class TestLists(TestCase):
         s = ','.join(alpha1)
         self.assertEqual("x,e,i,m,n,o,s", s)
 
+    def test_jagged_arrays(self):
+        intervals = [[5, 3], [2, 1], [0, 100], [-7, 11]]
+
+        # Sort by first item
+        # Note: contrary to the C# counterpart, Python's lambda here is used only to spell out what to sort on
+        # in this case we sort 2-item mini arrays, using their first item only (x[0]) and ignoring the rest
+        intervals.sort(key=lambda x: x[0])
+        self.assertEqual([[-7, 11], [0, 100], [2, 1], [5, 3]], intervals)
+
     def test_built_in_list_functions(self):
         numbers = [3.14, -5, 10, 10 ** 4]
         self.assertEqual(-5, min(numbers))
