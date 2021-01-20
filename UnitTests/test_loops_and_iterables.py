@@ -19,9 +19,12 @@ class TestLoopsAndIterables(unittest.TestCase):
         self.assertEqual(True, 5 in a)
 
         # foreach
-        print("foreach")
+        print("foreach (num in array)")
         for num in [2, 4, 6, 8, 10]:
             print(num)
+        print("foreach (char in string)")
+        for c in 'simone':
+            print(c)
 
         # for by index
         print("for by index")
